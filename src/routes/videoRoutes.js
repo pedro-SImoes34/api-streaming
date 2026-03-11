@@ -5,6 +5,9 @@ const videoController = require('../controllers/videoController');
 // Rota para CRIAR um vídeo (POST)
 router.post('/', videoController.createVideo);
 
+// Rota para LISTAR vídeos (GET)
+router.get('/', videoController.getVideos);
+
 // Rota estática para listar os TOP 10 (GET)
 // ATENÇÃO: Esta rota DEVE vir antes da rota de categoria. 
 // Se viesse depois, o Express acharia que "top" é o nome de uma categoria!
